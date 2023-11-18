@@ -501,9 +501,11 @@ compile_error!("`wasm-bindgen` cannot be used with `no-std`");
 #[cfg(feature = "stdweb")]
 compile_error!("`stdweb` cannot be used with `no-std`");
 
-#[cfg(target_family = "wasm")]
-#[cfg(feature = "no_std")]
-compile_error!("`no_std` cannot be used for WASM target");
+// Askannz's fork: disabled for WASM no_std
+//
+// #[cfg(target_family = "wasm")]
+// #[cfg(feature = "no_std")]
+// compile_error!("`no_std` cannot be used for WASM target");
 
 #[cfg(not(target_family = "wasm"))]
 #[cfg(feature = "wasm-bindgen")]

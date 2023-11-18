@@ -1,5 +1,10 @@
-Rhai - Embedded Scripting for Rust
+Rhai - Embedded Scripting for Rust (Askannz's fork)
 ==================================
+
+This is a fork of https://github.com/rhaiscript/rhai, patched to support `[no_std]` on WASM targets.
+
+Original README below
+------------------
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/rhaiscript/rhai?logo=github)
 [![Build Status](https://github.com/rhaiscript/rhai/workflows/Build/badge.svg)](https://github.com/rhaiscript/rhai/actions)

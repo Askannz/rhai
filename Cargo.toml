@@ -114,10 +114,12 @@ no_std = ["no-std-compat", "num-traits/libm", "core-error", "libm", "hashbrown",
 
 #! ### JavaScript Interface for WASM
 
+# Askannz's fork: disabled for WASM no_std
+#
 ## Use [`wasm-bindgen`](https://crates.io/crates/wasm-bindgen) as JavaScript interface.
-wasm-bindgen = ["getrandom/js", "instant/wasm-bindgen"]
+#wasm-bindgen = ["getrandom/js", "instant/wasm-bindgen"]
 ## Use [`stdweb`](https://crates.io/crates/stdweb) as JavaScript interface.
-stdweb = ["getrandom/js", "instant/stdweb"]
+#stdweb = ["getrandom/js", "instant/stdweb"]
 
 #! ### Features used in testing environments only
 
@@ -149,8 +151,10 @@ codegen-units = 1
 #opt-level = "z"     # optimize for size
 #panic = 'abort'     # remove stack backtrace for no-std
 
-[target.'cfg(target_family = "wasm")'.dependencies]
-instant = { version = "0.1.10" } # WASM implementation of std::time::Instant
+# Askannz's fork: disabled for WASM no_std
+#
+#[target.'cfg(target_family = "wasm")'.dependencies]
+#instant = { version = "0.1.10" } # WASM implementation of std::time::Instant
 
 [package.metadata.docs.rs]
 features = ["document-features", "metadata", "serde", "internals", "decimal", "debugging"]
